@@ -1,16 +1,27 @@
 import "./App.css";
 import user from "./data/user.json";
-import ProfileDescription from "./components/profile/ProfileDiscription";
-
+import Profile from "./components/profile/Profile";
+import ProfileDescription from "./components/profile/profileDescription/ProfileDiscription";
+import ProfileStats from "./components/profile/profileStats/ProfileStats";
+const {
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
+} = user;
 function App() {
   return (
-    <div className="App">
-      <ProfileDescription
-        username={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-      />
+    <div>
+      <Profile>
+        <ProfileDescription
+          username={username}
+          tag={tag}
+          location={location}
+          avatar={avatar}
+        />
+        <ProfileStats followers={followers} views={views} likes={likes} />
+      </Profile>
     </div>
   );
 }

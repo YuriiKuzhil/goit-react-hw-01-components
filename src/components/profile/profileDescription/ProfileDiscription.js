@@ -2,11 +2,11 @@ import PropTypes from "prop-types";
 
 const ProfileDescription = ({ username, tag, location, avatar }) => {
   return (
-    <div class="description">
-      <img src={avatar} alt="User avatar" class="avatar" />
-      <p class="name">{username}</p>
-      <p class="tag">@{tag}</p>
-      <p class="location">{location}</p>
+    <div className="description">
+      <img src={avatar} alt="User avatar" className="avatar" />
+      <p className="name">{username}</p>
+      <p className="tag">@{tag}</p>
+      <p className="location">{location}</p>
     </div>
   );
 };
