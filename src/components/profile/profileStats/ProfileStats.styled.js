@@ -19,5 +19,8 @@ export const StatsItem = styled.li`
     border-right: 1px solid #8b8b8b;
   }
 `;
-export const ItemLabel = styled.span``;
-export const ItemQuantity = styled.span``;
+
+export const ItemQuantity = styled.span`
+  font-weight: 700;
+  color: #212121;
+`;

@@ -1,11 +1,12 @@
-import StatList from "./StatList";
+import StatList from "./statList/StatList";
+import { Section, Title } from "./Statistics.styled";
 
 const Statistics = ({ title, stats }) => {
   return (
-    <section className="statistics">
-      {title && <h2>{title}</h2>}
+    <Section>
+      {title && <Title>{title}</Title>}
       <StatList items={stats} />
-    </section>
+    </Section>
   );
 };
 export default Statistics;

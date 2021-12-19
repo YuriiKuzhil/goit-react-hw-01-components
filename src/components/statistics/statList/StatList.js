@@ -1,8 +1,9 @@
-import StatItem from "./StatItem";
+import StatItem from "../statItem/StatItem";
+import { StatisticList } from "./StatList.styled";
 
 const StatList = ({ items }) => {
   return (
-    <ul className="stat-list">
+    <StatisticList>
       {items.map((item) => (
         <StatItem
           label={item.label}
@@ -10,7 +11,7 @@ const StatList = ({ items }) => {
           key={item.id}
         />
       ))}
-    </ul>
+    </StatisticList>
   );
 };
 export default StatList;

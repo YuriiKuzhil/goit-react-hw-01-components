@@ -1,9 +1,10 @@
-import TransactionHistoryHeader from "./TransactionHistoryHeader";
-import TransactionHistoryItem from "./TransactionHistoryItem";
+import TransactionHistoryHeader from "./transactionHistoryHeader/TransactionHistoryHeader";
+import TransactionHistoryItem from "./transactionHistoryItem/TransactionHistoryItem";
+import { TransactionHistoryTable } from "./TransactionHistory.styled";
 
 const TransactionHistory = ({ items }) => {
   return (
-    <table className="transaction-history">
+    <TransactionHistoryTable>
       <TransactionHistoryHeader />
       <tbody>
         {items.map((item) => (
@@ -15,7 +16,7 @@ const TransactionHistory = ({ items }) => {
           />
         ))}
       </tbody>
-    </table>
+    </TransactionHistoryTable>
   );
 };
 export default TransactionHistory;

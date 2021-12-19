@@ -24,16 +24,10 @@ export const Name = styled.p`
   margin-top: 0;
 `;
 export const Tag = styled.p`
-  font-size: 18px;
-  line-height: 2;
-
   margin-bottom: 10px;
   margin-top: 0;
 `;
 export const Location = styled.p`
-  font-size: 18px;
-  line-height: 2;
-
   margin-bottom: 0;
   margin-top: 0;
 `;

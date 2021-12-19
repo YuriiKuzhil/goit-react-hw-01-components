@@ -1,24 +1,19 @@
 import PropTypes from "prop-types";
-import {
-  ListStats,
-  StatsItem,
-  ItemLabel,
-  ItemQuantity,
-} from "./ProfileStats.styled";
+import { ListStats, StatsItem, ItemQuantity } from "./ProfileStats.styled";
 
 const ProfileStats = ({ followers, views, likes }) => {
   return (
     <ListStats>
       <StatsItem>
-        <ItemLabel>Followers</ItemLabel>
+        <span>Followers</span>
         <ItemQuantity>{followers}</ItemQuantity>
       </StatsItem>
       <StatsItem>
-        <ItemLabel>Views</ItemLabel>
+        <span>Views</span>
         <ItemQuantity>{views}</ItemQuantity>
       </StatsItem>
       <StatsItem>
-        <ItemLabel>Likes</ItemLabel>
+        <span>Likes</span>
         <ItemQuantity>{likes}</ItemQuantity>
       </StatsItem>
     </ListStats>

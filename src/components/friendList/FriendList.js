@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
-import FriendlistItem from "./FriendListItem";
+import { List } from "./FriendList.styled";
+import FriendlistItem from "./friendListItem/FriendListItem";
 
 const FriendList = ({ items }) => {
   return (
-    <ul className="friend-list">
+    <List>
       {items.map((item) => (
         <FriendlistItem
           key={item.id}
@@ -12,7 +13,7 @@ const FriendList = ({ items }) => {
           name={item.name}
         />
       ))}
-    </ul>
+    </List>
   );
 };
 FriendList.propTypes = {
