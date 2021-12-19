@@ -1,4 +1,3 @@
-import "./App.css";
 import user from "./data/user.json";
 import data from "./data/data.json";
 import friends from "./data/friends.json";
@@ -9,6 +8,7 @@ import ProfileStats from "./components/profile/profileStats/ProfileStats";
 import Statistics from "./components/statistics/Statistics";
 import FriendList from "./components/friendList/FriendList";
 import TransactionHistory from "./components/transactionHistory/TransactionHistory";
+import { Container } from "./App.styled";
 
 const {
   username,
@@ -20,7 +20,7 @@ const {
 
 function App() {
   return (
-    <div>
+    <Container>
       <Profile>
         <ProfileDescription
           username={username}
@@ -33,7 +33,7 @@ function App() {
       <Statistics title="Upload stats" stats={data} />
       <FriendList items={friends} />
       <TransactionHistory items={transactions} />
-    </div>
+    </Container>
   );
 }
 

@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
+import { Card } from "./Profile.styled";
 
 const Profile = ({ children }) => {
-  return <div className="profile">{children}</div>;
+  return <Card>{children}</Card>;
 };
 Profile.propTypes = {
   children: PropTypes.node,
