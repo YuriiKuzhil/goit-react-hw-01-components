@@ -6,9 +6,9 @@ import {
   ItemName,
 } from "./FriendListItem.styled";
 
-const FriendlistItem = ({ id, isOnline, avatar, name }) => {
+const FriendlistItem = ({ isOnline, avatar, name }) => {
   return (
-    <FriendItem key={id}>
+    <FriendItem>
       <ItemStatus isOnline={isOnline}></ItemStatus>
       <ItemImage src={avatar} alt="User avatar" width="48" />
       <ItemName>{name}</ItemName>
@@ -16,9 +16,8 @@ const FriendlistItem = ({ id, isOnline, avatar, name }) => {
   );
 };
 FriendlistItem.propTypes = {
-  id: PropTypes.number,
-  isOnline: PropTypes.bool,
-  avatar: PropTypes.string,
-  name: PropTypes.string,
+  isOnline: PropTypes.bool.isRequired,
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 export default FriendlistItem;
